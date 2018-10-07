@@ -1,0 +1,49 @@
+{
+  "name": "maxwell",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Web Audio API Drum Sequencer",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "jest"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.1",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
+    "parcel-bundler": "^1.10.2",
+    "prettier": "^1.14.3"
+  }
+}
